@@ -213,8 +213,9 @@ export default function Navigation() {
           border-right: 1px solid var(--border-light);
           display: flex;
           flex-direction: column;
-          position: sticky;
+          position: fixed;
           top: 0;
+          left: 0;
           transition: var(--transition-smooth);
           z-index: 999;
           box-shadow: 4px 0 12px rgba(15, 23, 42, 0.02);

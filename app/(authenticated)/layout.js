@@ -61,15 +61,25 @@ export default function DashboardLayout({ children }) {
           flex-direction: column;
           min-height: 100vh;
           overflow-x: hidden;
+          margin-left: 260px;
+          transition: margin-left var(--transition-smooth, 0.3s ease);
         }
         .content-viewport {
           flex: 1;
           padding: 40px;
           overflow-y: auto;
         }
-        @media (max-width: 768px) {
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .layout-content {
+            margin-left: 80px;
+          }
+        }
+        @media (max-width: 767px) {
           .layout-container {
             flex-direction: column;
+          }
+          .layout-content {
+            margin-left: 0;
           }
           .content-viewport {
             padding: 20px;
