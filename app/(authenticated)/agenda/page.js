@@ -664,24 +664,21 @@ export default function CalendarPage() {
           overflow: hidden;
         }
         .mini-event-pill {
-          font-size: 9px;
+          font-size: 10px;
           font-weight: 600;
-          padding: 2px 6px;
+          padding: 3px 8px;
           border-radius: 4px;
-          border-left: 2px solid;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
         }
         .mini-event-pill.type-mentoria {
-          background: rgba(237, 192, 102, 0.1);
-          border-left-color: var(--gold);
+          background: rgba(46, 98, 246, 0.08);
           color: var(--gold);
         }
         .mini-event-pill.type-atualizacao {
-          background: rgba(59, 130, 246, 0.1);
-          border-left-color: #3B82F6;
-          color: #93c5fd;
+          background: rgba(59, 130, 246, 0.08);
+          color: #2563eb;
         }
 
         .list-view-container {
@@ -693,10 +690,13 @@ export default function CalendarPage() {
           padding: 24px;
           display: flex;
           gap: 24px;
-          border-left: 4px solid;
+          border: 1px solid var(--border-light);
+          border-radius: var(--radius-lg);
+          transition: var(--transition-smooth);
         }
-        .list-event-card.type-mentoria { border-left-color: var(--gold); }
-        .list-event-card.type-atualizacao { border-left-color: #3B82F6; }
+        .list-event-card:hover {
+          border-color: var(--gold-border);
+        }
         
         .event-date-side {
           display: flex;

@@ -1035,13 +1035,16 @@ export default function DashboardPage() {
           display: flex;
           align-items: center;
           gap: 12px;
-          padding: 8px;
-          border-left: 2px solid;
-          background: rgba(255, 255, 255, 0.01);
-          border-radius: var(--radius-sm);
+          padding: 10px 12px;
+          border: 1px solid var(--border-light);
+          background: var(--bg-card);
+          border-radius: var(--radius-md);
+          transition: var(--transition-smooth);
         }
-        .event-teaser-card.border-mentoria { border-left-color: var(--gold); }
-        .event-teaser-card.border-atualizacao { border-left-color: #3B82F6; }
+        .event-teaser-card:hover {
+          border-color: var(--gold-border);
+          background: var(--bg-card-hover);
+        }
         .event-date-badge {
           display: flex;
           flex-direction: column;

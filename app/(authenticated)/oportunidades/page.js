@@ -13,10 +13,6 @@ export default function OpportunitiesPage() {
   const [selectedOpp, setSelectedOpp] = useState(null);
   const [manifesting, setManifesting] = useState(false);
 
-  useEffect(() => {
-    fetchOpportunities();
-  }, []);
-
   const fetchOpportunities = async () => {
     try {
       const res = await fetch('/api/db?collection=opportunities');
@@ -29,6 +25,10 @@ export default function OpportunitiesPage() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchOpportunities();
+  }, []);
 
   const handleManifestInterest = async (oppId) => {
     setManifesting(true);
@@ -359,9 +359,9 @@ export default function OpportunitiesPage() {
         }
         .pitch-body h3 {
           font-size: 15px;
+          font-weight: 600;
+          color: var(--text-primary);
           margin-bottom: 8px;
-          border-left: 2px solid var(--gold);
-          padding-left: 8px;
         }
         .pitch-body p {
           font-size: 13px;

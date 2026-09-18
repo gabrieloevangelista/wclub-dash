@@ -523,15 +523,17 @@ export default function MissionsPage() {
           margin-bottom: 24px;
           font-size: 13px;
           line-height: 1.5;
-          border-left: 3px solid;
+          border: 1px solid transparent;
         }
         .feedback-block.border-approved {
-          background: rgba(16, 185, 129, 0.02);
-          border-color: #10B981;
+          background: rgba(16, 185, 129, 0.05);
+          border-color: rgba(16, 185, 129, 0.2);
+          color: #065f46;
         }
         .feedback-block.border-rejected {
-          background: rgba(239, 68, 68, 0.02);
-          border-color: #EF4444;
+          background: rgba(239, 68, 68, 0.05);
+          border-color: rgba(239, 68, 68, 0.2);
+          color: #991b1b;
         }
         .feedback-block h4 {
           margin-bottom: 4px;

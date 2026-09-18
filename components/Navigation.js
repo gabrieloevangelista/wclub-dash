@@ -216,6 +216,7 @@ export default function Navigation() {
           position: fixed;
           top: 0;
           left: 0;
+          overflow: hidden;
           transition: var(--transition-smooth);
           z-index: 999;
           box-shadow: 4px 0 12px rgba(15, 23, 42, 0.02);
@@ -261,8 +262,8 @@ export default function Navigation() {
           display: flex;
           align-items: center;
           gap: 12px;
-          padding: 10px 12px;
-          border-radius: var(--radius-sm);
+          padding: 10px 14px;
+          border-radius: var(--radius-md);
           color: var(--text-secondary);
           text-decoration: none;
           font-size: 14px;
@@ -276,7 +277,7 @@ export default function Navigation() {
         :global(.menu-link.active) {
           background: var(--gold-glow);
           color: var(--gold);
-          border-left: 2px solid var(--gold);
+          font-weight: 600;
         }
         .sidebar-footer {
           border-top: 1px solid var(--border-light);
@@ -285,6 +286,11 @@ export default function Navigation() {
           align-items: center;
           justify-content: space-between;
           gap: 8px;
+          flex-shrink: 0;
+          position: sticky;
+          bottom: 0;
+          background: var(--bg-card);
+          z-index: 1;
         }
         .logout-button {
           background: transparent;

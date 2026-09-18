@@ -324,12 +324,14 @@ export default function AdminMissionsCorrectionsPage() {
         }
         .sub-card {
           padding: 24px;
-          border-left: 4px solid;
-          background: rgba(10, 10, 18, 0.4);
+          border: 1px solid var(--border-light);
+          border-radius: var(--radius-lg);
+          background: var(--bg-card);
+          transition: var(--transition-smooth);
         }
-        .sub-card.border-pending { border-left-color: #F59E0B; }
-        .sub-card.border-approved { border-left-color: #10B981; }
-        .sub-card.border-rejected { border-left-color: #EF4444; }
+        .sub-card.border-pending { border-color: rgba(245, 158, 11, 0.4); }
+        .sub-card.border-approved { border-color: rgba(16, 185, 129, 0.4); }
+        .sub-card.border-rejected { border-color: rgba(239, 68, 68, 0.4); }
 
         .sub-header {
           display: flex;

@@ -264,8 +264,10 @@ export default function Header() {
           transition: var(--transition-smooth);
         }
         .notif-item.unread {
-          background: var(--gold-glow);
-          border-left: 2px solid var(--gold);
+          background: rgba(46, 98, 246, 0.04);
+        }
+        .notif-item.unread .notif-body h4 {
+          color: var(--gold);
         }
         .notif-item.read {
           opacity: 0.7;
