@@ -180,7 +180,7 @@ export default function MissionsPage() {
         <div className="premium-loader"></div>
         <style jsx>{`
           .loader-box { display: flex; align-items: center; justify-content: center; height: 50vh; }
-          .premium-loader { width: 35px; height: 35px; border: 2px solid rgba(237, 192, 102, 0.1); border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite; }
+          .premium-loader { width: 35px; height: 35px; border: 2px solid rgba(46, 98, 246, 0.15); border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite; }
           @keyframes spin { to { transform: rotate(360deg); } }
         `}</style>
       </div>
@@ -421,7 +421,7 @@ export default function MissionsPage() {
         }
         .progress-bar-container {
           height: 8px;
-          background: rgba(255, 255, 255, 0.05);
+          background: var(--border-light);
           border-radius: 4px;
           overflow: hidden;
         }
@@ -450,7 +450,7 @@ export default function MissionsPage() {
           transition: var(--transition-smooth);
         }
         .mission-header:hover {
-          background: rgba(255, 255, 255, 0.01);
+          background: var(--bg-card-hover);
         }
         .header-left {
           display: flex;
@@ -462,7 +462,7 @@ export default function MissionsPage() {
           font-weight: 700;
           color: var(--gold);
           text-transform: uppercase;
-          background: rgba(237, 192, 102, 0.1);
+          background: rgba(46, 98, 246, 0.08);
           padding: 4px 10px;
           border-radius: 4px;
         }
@@ -485,7 +485,7 @@ export default function MissionsPage() {
           border-radius: 30px;
         }
         .status-badge.pending-send {
-          background: rgba(255, 255, 255, 0.03);
+          background: var(--bg-deep);
           border: 1px solid var(--border-light);
           color: var(--text-secondary);
         }
@@ -552,7 +552,7 @@ export default function MissionsPage() {
         }
         .file-uploader-box {
           border: 1px dashed var(--border-light);
-          background: rgba(255, 255, 255, 0.01);
+          background: var(--bg-card);
           border-radius: var(--radius-md);
           padding: 20px;
           text-align: center;
@@ -566,7 +566,7 @@ export default function MissionsPage() {
         }
         .file-uploader-box:hover {
           border-color: var(--gold-border);
-          background: rgba(237, 192, 102, 0.02);
+          background: rgba(46, 98, 246, 0.04);
         }
         .file-input-hidden {
           position: absolute;
@@ -590,7 +590,7 @@ export default function MissionsPage() {
           align-items: center;
           gap: 12px;
           padding: 12px 16px;
-          background: rgba(237, 192, 102, 0.05);
+          background: rgba(46, 98, 246, 0.04);
           border: 1px solid var(--gold-border);
           border-radius: var(--radius-sm);
           margin-top: 10px;

@@ -740,7 +740,9 @@ export default function AdminContentPage() {
           max-width: 400px;
         }
         .select-box {
-          background: #080811;
+          background: #FFFFFF;
+          color: var(--text-primary);
+          border: 1px solid var(--border-light);
         }
         .actions-right {
           display: flex;
@@ -900,7 +902,7 @@ export default function AdminContentPage() {
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(1, 1, 5, 0.85);
+          background: var(--bg-overlay);
           z-index: 10000;
           display: flex;
           align-items: center;
@@ -911,7 +913,9 @@ export default function AdminContentPage() {
           width: 100%;
           max-width: 580px;
           padding: 30px;
-          background: #080811;
+          background: var(--bg-card);
+          border: 1px solid var(--border-light);
+          border-radius: var(--radius-lg);
         }
         .modal-form {
           display: flex;

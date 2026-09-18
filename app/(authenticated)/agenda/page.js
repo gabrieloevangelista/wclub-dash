@@ -557,7 +557,7 @@ export default function CalendarPage() {
           transition: var(--transition-smooth);
         }
         .filter-btn.active {
-          background: rgba(237, 192, 102, 0.08);
+          background: rgba(46, 98, 246, 0.08);
           border-color: var(--gold);
           color: var(--gold);
         }
@@ -648,8 +648,8 @@ export default function CalendarPage() {
           cursor: pointer;
         }
         .day-cell.authorized:hover {
-          border-color: rgba(237, 192, 102, 0.2);
-          background: rgba(237, 192, 102, 0.02);
+          border-color: var(--gold-border);
+          background: var(--bg-card-hover);
         }
         .day-number {
           font-size: 12px;
@@ -789,7 +789,7 @@ export default function CalendarPage() {
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(1, 1, 5, 0.8);
+          background: var(--bg-overlay);
           z-index: 10000;
           display: flex;
           align-items: center;
@@ -800,7 +800,9 @@ export default function CalendarPage() {
           width: 100%;
           max-width: 580px;
           padding: 30px;
-          background: #080811;
+          background: var(--bg-card);
+          border: 1px solid var(--border-light);
+          border-radius: var(--radius-lg);
         }
         .modal-sub {
           font-size: 13px;
@@ -822,8 +824,8 @@ export default function CalendarPage() {
           width: 100%;
         }
         .select-input option {
-          background: #080811;
-          color: white;
+          background: #FFFFFF;
+          color: var(--text-primary);
         }
         .modal-actions {
           display: flex;

@@ -474,10 +474,10 @@ export default function AdminMembersPage() {
           transition: var(--transition-smooth);
         }
         .members-table tbody tr:hover {
-          background: rgba(255, 255, 255, 0.01);
+          background: var(--bg-card-hover);
         }
         .row-selected {
-          background: rgba(237, 192, 102, 0.03) !important;
+          background: rgba(46, 98, 246, 0.05) !important;
         }
 
         .user-profile-row {
@@ -627,7 +627,7 @@ export default function AdminMembersPage() {
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(1, 1, 5, 0.85);
+          background: var(--bg-overlay);
           z-index: 10000;
           display: flex;
           align-items: center;
@@ -638,7 +638,9 @@ export default function AdminMembersPage() {
           width: 100%;
           max-width: 580px;
           padding: 30px;
-          background: #080811;
+          background: var(--bg-card);
+          border: 1px solid var(--border-light);
+          border-radius: var(--radius-lg);
         }
         .modal-sub {
           font-size: 13px;
@@ -657,7 +659,9 @@ export default function AdminMembersPage() {
           gap: 16px;
         }
         .select-box {
-          background: #080811;
+          background: #FFFFFF;
+          color: var(--text-primary);
+          border: 1px solid var(--border-light);
         }
         .modal-actions {
           display: flex;

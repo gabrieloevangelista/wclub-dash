@@ -492,7 +492,7 @@ export default function ConnectionsPage() {
           transition: var(--transition-smooth);
         }
         .tab-btn.active {
-          background: rgba(237, 192, 102, 0.08);
+          background: rgba(46, 98, 246, 0.08);
           color: var(--gold);
           font-weight: 600;
         }

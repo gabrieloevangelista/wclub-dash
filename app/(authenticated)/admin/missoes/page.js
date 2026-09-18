@@ -312,7 +312,7 @@ export default function AdminMissionsCorrectionsPage() {
           transition: var(--transition-smooth);
         }
         .tab-btn.active {
-          background: rgba(237, 192, 102, 0.08);
+          background: rgba(46, 98, 246, 0.08);
           color: var(--gold);
           font-weight: 600;
         }
@@ -462,7 +462,7 @@ export default function AdminMissionsCorrectionsPage() {
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(1, 1, 5, 0.85);
+          background: var(--bg-overlay);
           z-index: 10000;
           display: flex;
           align-items: center;
@@ -473,7 +473,9 @@ export default function AdminMissionsCorrectionsPage() {
           width: 100%;
           max-width: 580px;
           padding: 30px;
-          background: #080811;
+          background: var(--bg-card);
+          border: 1px solid var(--border-light);
+          border-radius: var(--radius-lg);
         }
         .modal-sub {
           font-size: 13px;
@@ -502,7 +504,7 @@ export default function AdminMissionsCorrectionsPage() {
           color: var(--text-muted);
         }
         .loader-box { display: flex; align-items: center; justify-content: center; height: 150px; }
-        .premium-loader { width: 30px; height: 30px; border: 2px solid rgba(237, 192, 102, 0.1); border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite; }
+        .premium-loader { width: 30px; height: 30px; border: 2px solid rgba(46, 98, 246, 0.15); border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite; }
         @keyframes spin { to { transform: rotate(360deg); } }
       `}</style>
     </div>

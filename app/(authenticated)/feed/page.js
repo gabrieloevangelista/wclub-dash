@@ -809,7 +809,7 @@ export default function FeedPage() {
         .type-selector-btn.active {
           border-color: var(--gold-border);
           color: var(--gold);
-          background: rgba(237, 192, 102, 0.05);
+          background: rgba(46, 98, 246, 0.06);
         }
         .post-btn {
           height: 32px;
@@ -1136,8 +1136,9 @@ export default function FeedPage() {
         .story-viewer-card {
           width: 100%;
           max-width: 400px;
-          background: #080811;
-          border-color: var(--gold-border);
+          background: var(--bg-card);
+          border: 1px solid var(--border-light);
+          border-radius: var(--radius-lg);
           padding: 20px;
           position: relative;
         }
@@ -1147,7 +1148,7 @@ export default function FeedPage() {
           right: 15px;
           background: transparent;
           border: none;
-          color: white;
+          color: var(--text-secondary);
           cursor: pointer;
           z-index: 20;
         }
@@ -1191,8 +1192,9 @@ export default function FeedPage() {
           height: 550px;
           display: flex;
           overflow: hidden;
-          background: #080811;
-          border-color: var(--gold-border);
+          background: var(--bg-card);
+          border: 1px solid var(--border-light);
+          border-radius: var(--radius-lg);
           position: relative;
         }
         .close-lightbox-btn {
@@ -1222,7 +1224,7 @@ export default function FeedPage() {
           display: flex;
           flex-direction: column;
           border-left: 1px solid var(--border-light);
-          background: rgba(10, 10, 18, 0.95);
+          background: var(--bg-card);
         }
         .lightbox-author-header {
           padding: 20px;
@@ -1237,7 +1239,7 @@ export default function FeedPage() {
           border-radius: 50%;
           overflow: hidden;
           background: var(--gold-gradient);
-          color: #010105;
+          color: #FFFFFF;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -1269,7 +1271,7 @@ export default function FeedPage() {
         .lightbox-footer-form {
           border-top: 1px solid var(--border-light);
           padding: 16px 20px;
-          background: rgba(8, 8, 17, 0.5);
+          background: var(--bg-deep);
         }
         .lightbox-footer-form .inline-actions {
           border-top: none;
@@ -1284,7 +1286,7 @@ export default function FeedPage() {
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(1, 1, 5, 0.85);
+          background: var(--bg-overlay);
           z-index: 10000;
           display: flex;
           align-items: center;
@@ -1297,7 +1299,7 @@ export default function FeedPage() {
           color: var(--text-muted);
         }
         .loader-box { display: flex; align-items: center; justify-content: center; height: 150px; }
-        .premium-loader { width: 30px; height: 30px; border: 2px solid rgba(237, 192, 102, 0.1); border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite; }
+        .premium-loader { width: 30px; height: 30px; border: 2px solid rgba(46, 98, 246, 0.15); border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite; }
         @keyframes spin { to { transform: rotate(360deg); } }
       `}</style>
     </div>

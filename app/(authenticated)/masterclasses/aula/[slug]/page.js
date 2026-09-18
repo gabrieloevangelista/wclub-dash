@@ -208,7 +208,7 @@ export default function LessonPlayerPage({ params }) {
         <div className="premium-loader"></div>
         <style jsx>{`
           .loader-box { display: flex; align-items: center; justify-content: center; height: 50vh; }
-          .premium-loader { width: 35px; height: 35px; border: 2px solid rgba(237, 192, 102, 0.1); border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite; }
+          .premium-loader { width: 35px; height: 35px; border: 2px solid rgba(46, 98, 246, 0.15); border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite; }
           @keyframes spin { to { transform: rotate(360deg); } }
         `}</style>
       </div>
@@ -438,12 +438,12 @@ export default function LessonPlayerPage({ params }) {
         }
         .scheduled-overlay h3 {
           font-size: 16px;
-          color: var(--gold);
+          color: #93C5FD;
           margin: 12px 0 6px 0;
         }
         .scheduled-overlay p {
           font-size: 12px;
-          color: var(--text-secondary);
+          color: rgba(255, 255, 255, 0.85);
           max-width: 400px;
         }
 
@@ -489,7 +489,7 @@ export default function LessonPlayerPage({ params }) {
           display: flex;
           align-items: center;
           gap: 16px;
-          background: rgba(255, 255, 255, 0.02);
+          background: var(--bg-deep);
           border: 1px solid var(--border-light);
           padding: 16px;
           border-radius: var(--radius-md);
@@ -503,7 +503,7 @@ export default function LessonPlayerPage({ params }) {
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #010105;
+          color: #FFFFFF;
           font-weight: 700;
         }
         .instructor-avatar img {
@@ -555,7 +555,7 @@ export default function LessonPlayerPage({ params }) {
           align-items: center;
           gap: 12px;
           padding: 12px;
-          background: rgba(255, 255, 255, 0.02);
+          background: var(--bg-deep);
           border: 1px solid var(--border-light);
           border-radius: var(--radius-sm);
         }
@@ -563,7 +563,7 @@ export default function LessonPlayerPage({ params }) {
           width: 36px;
           height: 36px;
           border-radius: 6px;
-          background: rgba(237, 192, 102, 0.05);
+          background: rgba(46, 98, 246, 0.08);
           color: var(--gold);
           display: flex;
           align-items: center;
@@ -633,7 +633,7 @@ export default function LessonPlayerPage({ params }) {
           width: 32px;
           height: 32px;
           border-radius: 50%;
-          background: rgba(255,255,255,0.05);
+          background: var(--bg-card-hover);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -682,7 +682,7 @@ export default function LessonPlayerPage({ params }) {
           font-size: 13px;
         }
         .loader-box { display: flex; align-items: center; justify-content: center; height: 50vh; }
-        .premium-loader { width: 35px; height: 35px; border: 2px solid rgba(237, 192, 102, 0.1); border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite; }
+        .premium-loader { width: 35px; height: 35px; border: 2px solid rgba(46, 98, 246, 0.15); border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite; }
         @keyframes spin { to { transform: rotate(360deg); } }
       `}</style>
     </div>

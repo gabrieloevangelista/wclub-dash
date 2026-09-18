@@ -206,7 +206,7 @@ export function ClientWrapper({ children }) {
         .toast-warning .toast-icon { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
         
         .toast-info { border-color: var(--gold-border); }
-        .toast-info .toast-icon { background: rgba(237, 192, 102, 0.15); color: var(--gold); }
+        .toast-info .toast-icon { background: rgba(46, 98, 246, 0.12); color: var(--gold); }
       `}</style>
     </AuthContext.Provider>
   );

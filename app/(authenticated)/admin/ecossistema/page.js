@@ -325,7 +325,7 @@ export default function AdminEcosystemPage() {
           font-size: 11px;
           font-family: monospace;
           color: var(--gold);
-          background: rgba(237, 192, 102, 0.05);
+          background: rgba(46, 98, 246, 0.06);
           padding: 6px;
           border-radius: 4px;
           margin-bottom: 20px;
@@ -400,7 +400,7 @@ export default function AdminEcosystemPage() {
           color: var(--text-muted);
         }
         .loader-box { display: flex; align-items: center; justify-content: center; height: 150px; }
-        .premium-loader { width: 30px; height: 30px; border: 2px solid rgba(237, 192, 102, 0.1); border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite; }
+        .premium-loader { width: 30px; height: 30px; border: 2px solid rgba(46, 98, 246, 0.15); border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite; }
         @keyframes spin { to { transform: rotate(360deg); } }
 
         /* View Toggle control styling */

@@ -102,7 +102,7 @@ export default function CourseDetailsPage({ params }) {
         <div className="premium-loader"></div>
         <style jsx>{`
           .loader-box { display: flex; align-items: center; justify-content: center; height: 50vh; }
-          .premium-loader { width: 35px; height: 35px; border: 2px solid rgba(237, 192, 102, 0.1); border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite; }
+          .premium-loader { width: 35px; height: 35px; border: 2px solid rgba(46, 98, 246, 0.15); border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite; }
           @keyframes spin { to { transform: rotate(360deg); } }
         `}</style>
       </div>
@@ -234,28 +234,40 @@ export default function CourseDetailsPage({ params }) {
           padding: 60px 40px;
           background-size: cover;
           background-position: center;
-          border-color: var(--gold-border);
+          border: 1px solid var(--border-light);
+          position: relative;
+          overflow: hidden;
         }
         .hero-content {
           max-width: 800px;
+          position: relative;
+          z-index: 1;
         }
         .welcome-tag {
-          font-size: 10px;
+          font-size: 11px;
           font-weight: 700;
-          color: var(--gold);
-          letter-spacing: 0.15em;
-          margin-bottom: 12px;
-          display: block;
+          color: #93C5FD;
+          background: rgba(46, 98, 246, 0.25);
+          border: 1px solid rgba(147, 197, 253, 0.3);
+          letter-spacing: 0.12em;
+          margin-bottom: 14px;
+          display: inline-block;
+          padding: 4px 10px;
+          border-radius: var(--radius-sm);
         }
         .hero-content h1 {
-          font-size: 36px;
+          font-size: 34px;
+          font-weight: 700;
+          color: #FFFFFF;
           margin-bottom: 12px;
-          letter-spacing: 0.02em;
+          letter-spacing: -0.01em;
+          text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
         .hero-content p {
-          color: var(--text-secondary);
-          font-size: 16px;
+          color: rgba(255, 255, 255, 0.88);
+          font-size: 15px;
           line-height: 1.6;
+          max-width: 65ch;
         }
         
         .modules-section h2 {
@@ -268,7 +280,7 @@ export default function CourseDetailsPage({ params }) {
           gap: 16px;
         }
         .module-item {
-          border-color: var(--gold-border);
+          border: 1px solid var(--border-light);
           overflow: hidden;
         }
         .module-header {
@@ -280,7 +292,7 @@ export default function CourseDetailsPage({ params }) {
           transition: var(--transition-smooth);
         }
         .module-header:hover {
-          background: rgba(255, 255, 255, 0.01);
+          background: var(--bg-card-hover);
         }
         .module-title-group {
           display: flex;
@@ -293,9 +305,9 @@ export default function CourseDetailsPage({ params }) {
           font-weight: 700;
           color: var(--gold);
           text-transform: uppercase;
-          background: rgba(237, 192, 102, 0.1);
+          background: rgba(46, 98, 246, 0.08);
           padding: 4px 10px;
-          border-radius: 4px;
+          border-radius: var(--radius-sm);
         }
         .module-title-group h3 {
           font-size: 16px;
@@ -325,7 +337,7 @@ export default function CourseDetailsPage({ params }) {
         .lessons-list {
           border-top: 1px solid var(--border-light);
           padding: 24px;
-          background: rgba(1, 1, 5, 0.2);
+          background: #F8FAFC;
           display: flex;
           flex-direction: column;
           gap: 16px;
@@ -341,14 +353,16 @@ export default function CourseDetailsPage({ params }) {
           align-items: center;
           gap: 20px;
           padding: 16px;
-          background: rgba(255, 255, 255, 0.02);
+          background: #FFFFFF;
           border: 1px solid var(--border-light);
           border-radius: var(--radius-md);
+          box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
           transition: var(--transition-smooth);
         }
         .lesson-row:hover {
-          border-color: rgba(237, 192, 102, 0.2);
-          background: rgba(255, 255, 255, 0.04);
+          border-color: var(--gold-border);
+          box-shadow: 0 3px 8px -1px rgba(46, 98, 246, 0.08);
+          background: #FFFFFF;
         }
         .lesson-thumbnail-mini {
           width: 100px;

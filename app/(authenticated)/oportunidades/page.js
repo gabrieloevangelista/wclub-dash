@@ -297,7 +297,7 @@ export default function OpportunitiesPage() {
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(1, 1, 5, 0.85);
+          background: var(--bg-overlay);
           z-index: 10000;
           display: flex;
           align-items: center;
@@ -308,7 +308,9 @@ export default function OpportunitiesPage() {
           max-width: 680px;
           width: 100%;
           padding: 40px;
-          background: #080811;
+          background: var(--bg-card);
+          border: 1px solid var(--border-light);
+          border-radius: var(--radius-lg);
           position: relative;
         }
         .close-btn {
@@ -335,7 +337,7 @@ export default function OpportunitiesPage() {
           flex-wrap: wrap;
         }
         .modal-pills .pill {
-          background: rgba(255, 255, 255, 0.03);
+          background: var(--bg-deep);
           border: 1px solid var(--border-light);
           padding: 4px 12px;
           border-radius: 4px;
@@ -421,7 +423,7 @@ export default function OpportunitiesPage() {
           color: var(--text-muted);
         }
         .loader-box { display: flex; align-items: center; justify-content: center; height: 200px; width: 100%; }
-        .premium-loader { width: 35px; height: 35px; border: 2px solid rgba(237, 192, 102, 0.1); border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite; }
+        .premium-loader { width: 35px; height: 35px; border: 2px solid rgba(46, 98, 246, 0.15); border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite; }
         @keyframes spin { to { transform: rotate(360deg); } }
       `}</style>
     </div>
