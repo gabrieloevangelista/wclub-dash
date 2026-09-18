@@ -109,11 +109,11 @@
       "description": "Conceitos fundamentais de zoneamento, taxa de ocupação e viabilidade econômica.",
       "cover_image_url": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=600",
       "status": "published",
-      "sequence_order": 1,
+      "sequence_order": 3,
       "slug": "introducao-viabilidade",
       "scheduled_at": null,
       "created_at": "2026-01-15T09:00:00Z",
-      "updated_at": "2026-06-30T13:06:05.932Z"
+      "updated_at": "2026-09-18T19:27:32.515Z"
     },
     {
       "id": "module-id-2",
@@ -122,10 +122,11 @@
       "description": "Como criar valor intangível para produtos imobiliários de luxo.",
       "cover_image_url": "https://images.unsplash.com/photo-1542744094-3a31f103e35f?auto=format&fit=crop&q=80&w=600",
       "status": "published",
-      "sequence_order": 3,
+      "sequence_order": 2,
       "slug": "marketing-luxo",
       "scheduled_at": null,
-      "created_at": "2026-01-15T10:00:00Z"
+      "created_at": "2026-01-15T10:00:00Z",
+      "updated_at": "2026-09-18T19:27:24.636Z"
     },
     {
       "id": "module-id-3",
@@ -134,10 +135,11 @@
       "description": "Conteúdo restrito temporalmente para membros comuns.",
       "cover_image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=600",
       "status": "published",
-      "sequence_order": 2,
+      "sequence_order": 1,
       "slug": "modulo-futuro",
       "scheduled_at": "2026-12-31T23:59:59Z",
-      "created_at": "2026-01-15T11:00:00Z"
+      "created_at": "2026-01-15T11:00:00Z",
+      "updated_at": "2026-09-18T19:27:28.818Z"
     }
   ],
   "lessons": [
