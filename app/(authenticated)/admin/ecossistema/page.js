@@ -423,9 +423,9 @@ export default function AdminEcosystemPage() {
           transition: var(--transition-smooth);
         }
         .toggle-view-btn.active {
-          background: var(--gold-gradient);
+          background: var(--gold);
           color: #FFFFFF;
-          box-shadow: 0 2px 8px rgba(46, 98, 246, 0.2);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
         }
 
         /* List View Table layout */

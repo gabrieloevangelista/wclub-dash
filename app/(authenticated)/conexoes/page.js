@@ -522,7 +522,6 @@ export default function ConnectionsPage() {
           font-size: 28px;
           overflow: hidden;
           border: 2px solid var(--gold-border);
-          box-shadow: var(--shadow-gold);
         }
         .avatar-bubble-large img {
           width: 100%;

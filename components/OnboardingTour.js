@@ -209,7 +209,7 @@ export default function OnboardingTour() {
           position: absolute;
           border: 2px solid var(--gold);
           border-radius: 8px;
-          box-shadow: 0 0 0 9999px rgba(15, 23, 42, 0.4), 0 0 15px var(--gold-glow);
+          box-shadow: 0 0 0 9999px rgba(15, 23, 42, 0.45);
           pointer-events: none;
           transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
@@ -217,8 +217,8 @@ export default function OnboardingTour() {
           width: 320px;
           padding: 20px;
           background: var(--bg-card);
-          border: 1px solid var(--gold-border);
-          box-shadow: var(--shadow-premium), var(--shadow-gold);
+          border: 1px solid var(--border-light);
+          box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
           display: flex;
           flex-direction: column;
           gap: 15px;

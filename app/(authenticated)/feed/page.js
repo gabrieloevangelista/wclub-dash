@@ -711,7 +711,6 @@ export default function FeedPage() {
         }
         .story-bubble-avatar.border-glow {
           border: 2px solid var(--gold);
-          box-shadow: 0 0 8px var(--gold-glow);
         }
         .story-bubble-avatar img {
           width: 100%;

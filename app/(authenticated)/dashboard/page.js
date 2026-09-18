@@ -876,8 +876,8 @@ export default function DashboardPage() {
           align-items: center;
           justify-content: space-between;
           background: var(--gold-gradient);
-          border-color: rgba(255, 255, 255, 0.15);
-          box-shadow: 0 10px 25px -5px rgba(46, 98, 246, 0.3);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          box-shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.08);
         }
         .welcome-tag {
           font-size: 10px;
@@ -1102,7 +1102,6 @@ export default function DashboardPage() {
         }
         .story-bubble-avatar.border-glow {
           border: 2px solid var(--gold);
-          box-shadow: 0 0 8px var(--gold-glow);
         }
         .story-bubble-avatar img {
           width: 100%;
