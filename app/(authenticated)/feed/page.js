@@ -670,9 +670,9 @@ export default function FeedPage() {
           </div>
         </div>
       )}
-    </div>
 
-      <style jsx>{\n/* COMMUNITY FEED STYLING */
+      <style jsx>{`
+        /* COMMUNITY FEED STYLING */
         .feed-layout {
           display: flex;
           flex-direction: column;
@@ -1300,8 +1300,7 @@ export default function FeedPage() {
         .loader-box { display: flex; align-items: center; justify-content: center; height: 150px; }
         .premium-loader { width: 30px; height: 30px; border: 2px solid rgba(237, 192, 102, 0.1); border-top-color: var(--gold); border-radius: 50%; animation: spin 1s linear infinite; }
         @keyframes spin { to { transform: rotate(360deg); } }
-      `}
-      }</style>
-
+      `}</style>
+    </div>
   );
 }
