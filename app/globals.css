@@ -412,3 +412,39 @@ input[type="file"]::file-selector-button:hover {
   to { transform: rotate(360deg); }
 }
 
+/* Skeleton Loading Shimmer */
+@keyframes skeletonShimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #E2E8F0 25%, #F8FAFC 50%, #E2E8F0 75%);
+  background-size: 200% 100%;
+  animation: skeletonShimmer 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  border-radius: var(--radius-sm);
+  display: block;
+}
+
+.skeleton-circle {
+  border-radius: 50% !important;
+}
+
+.skeleton-light {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.12) 25%, rgba(255, 255, 255, 0.28) 50%, rgba(255, 255, 255, 0.12) 75%);
+  background-size: 200% 100%;
+  animation: skeletonShimmer 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  border-radius: var(--radius-sm);
+  display: block;
+}
+
+.skeleton-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-premium);
+}

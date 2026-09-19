@@ -23,6 +23,7 @@ export default function DashboardPage() {
   const [submissions, setSubmissions] = useState([]);
   const [missions, setMissions] = useState([]);
   const [progressPercent, setProgressPercent] = useState(0);
+  const [dataLoading, setDataLoading] = useState(true);
 
   // Community Feed States
   const [posts, setPosts] = useState([]);
@@ -48,6 +49,7 @@ export default function DashboardPage() {
 
   const fetchDashboardData = async () => {
     try {
+      setDataLoading(true);
       const [cRes, lRes, eRes, mRes, sRes, pRes] = await Promise.all([
         fetch('/api/db?collection=courses'),
         fetch('/api/db?collection=lessons'),
@@ -92,6 +94,8 @@ export default function DashboardPage() {
       }
     } catch (err) {
       console.error('Failed to load dashboard', err);
+    } finally {
+      setDataLoading(false);
     }
   };
 
@@ -349,21 +353,136 @@ export default function DashboardPage() {
   const approvedMissions = submissions.filter(s => s.status === 'approved').length;
   const nextEvents = events.slice(0, 2);
 
-  if (!user) {
-    return (
-      <div className="loader-box glass-panel" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh' }}>
-        <div className="premium-loader"></div>
+  const renderDashboardSkeleton = () => (
+    <>
+      {/* 1. Greeting Card Skeleton */}
+      <section className="greeting-card glass-panel fade-in" style={{ pointerEvents: 'none' }}>
+        <div className="greeting-text" style={{ flex: 1 }}>
+          <div className="skeleton-light" style={{ width: '130px', height: '14px', marginBottom: '10px', borderRadius: '4px' }} />
+          <div className="skeleton-light" style={{ width: '60%', height: '28px', marginBottom: '10px', borderRadius: '6px' }} />
+          <div className="skeleton-light" style={{ width: '40%', height: '14px', borderRadius: '4px' }} />
+        </div>
+        <div className="quick-stats-pills">
+          <div className="stat-pill" style={{ minWidth: '110px' }}>
+            <div className="skeleton-light" style={{ width: '75px', height: '16px', marginBottom: '6px' }} />
+            <div className="skeleton-light" style={{ width: '45px', height: '10px' }} />
+          </div>
+          <div className="stat-pill border-gold" style={{ minWidth: '95px' }}>
+            <div className="skeleton-light" style={{ width: '55px', height: '16px', marginBottom: '6px' }} />
+            <div className="skeleton-light" style={{ width: '40px', height: '10px' }} />
+          </div>
+        </div>
+      </section>
+
+      {/* 2. Mentorship Progress Skeleton */}
+      <section className="progress-section glass-panel fade-in" style={{ pointerEvents: 'none' }}>
+        <div className="skeleton" style={{ width: '180px', height: '18px', marginBottom: '16px', borderRadius: '4px' }} />
+        <div className="progress-grid">
+          <div className="progress-card" style={{ background: '#FFFFFF' }}>
+            <div className="progress-header" style={{ marginBottom: '12px' }}>
+              <div className="skeleton" style={{ width: '120px', height: '14px', borderRadius: '4px' }} />
+              <div className="skeleton" style={{ width: '38px', height: '14px', borderRadius: '4px' }} />
+            </div>
+            <div className="progress-bar-container" style={{ margin: '0 0 12px 0', background: 'var(--border-light)' }}>
+              <div className="skeleton" style={{ width: '50%', height: '100%' }} />
+            </div>
+            <div className="skeleton" style={{ width: '70%', height: '12px', borderRadius: '4px' }} />
+          </div>
+
+          <div className="progress-card" style={{ background: '#FFFFFF' }}>
+            <div className="progress-header" style={{ marginBottom: '12px' }}>
+              <div className="skeleton" style={{ width: '110px', height: '14px', borderRadius: '4px' }} />
+              <div className="skeleton" style={{ width: '38px', height: '14px', borderRadius: '4px' }} />
+            </div>
+            <div className="progress-bar-container" style={{ margin: '0 0 12px 0', background: 'var(--border-light)' }}>
+              <div className="skeleton" style={{ width: '35%', height: '100%' }} />
+            </div>
+            <div className="skeleton" style={{ width: '60%', height: '12px', borderRadius: '4px' }} />
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Dashboard Grid: Courses & Community (Left) + Events (Right) */}
+      <div className="dashboard-grid" style={{ pointerEvents: 'none' }}>
+        <div className="grid-col-left" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          {/* Masterclasses Teaser Skeleton */}
+          <section className="courses-teaser glass-panel fade-in">
+            <div className="section-title-row">
+              <div className="skeleton" style={{ width: '190px', height: '18px', borderRadius: '4px' }} />
+              <div className="skeleton" style={{ width: '65px', height: '14px', borderRadius: '4px' }} />
+            </div>
+            <div className="courses-list-teaser">
+              {[1, 2].map(i => (
+                <div key={i} className="course-row-card" style={{ background: '#FFFFFF' }}>
+                  <div className="course-cover-mini">
+                    <div className="skeleton" style={{ width: '100%', height: '100%' }} />
+                  </div>
+                  <div className="course-info-mini" style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                    <div className="skeleton" style={{ width: '60%', height: '14px', borderRadius: '4px' }} />
+                    <div className="skeleton" style={{ width: '85%', height: '11px', borderRadius: '4px' }} />
+                  </div>
+                  <div className="skeleton skeleton-circle" style={{ width: '28px', height: '28px', marginLeft: 'auto', flexShrink: 0 }} />
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Community Teaser Skeleton */}
+          <section className="community-teaser glass-panel fade-in">
+            <div className="section-title-row">
+              <div className="skeleton" style={{ width: '175px', height: '18px', borderRadius: '4px' }} />
+              <div className="skeleton" style={{ width: '100px', height: '14px', borderRadius: '4px' }} />
+            </div>
+            <div className="feed-teaser-cards">
+              <div className="feed-teaser-item" style={{ alignItems: 'center' }}>
+                <div className="skeleton" style={{ width: '32px', height: '32px', borderRadius: '8px', flexShrink: 0 }} />
+                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  <div className="skeleton" style={{ width: '40%', height: '14px', borderRadius: '4px' }} />
+                  <div className="skeleton" style={{ width: '80%', height: '11px', borderRadius: '4px' }} />
+                  <div className="skeleton" style={{ width: '90px', height: '11px', borderRadius: '4px' }} />
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div className="grid-col-right">
+          {/* Events Teaser Skeleton */}
+          <section className="events-teaser glass-panel fade-in">
+            <div className="section-title-row">
+              <div className="skeleton" style={{ width: '155px', height: '18px', borderRadius: '4px' }} />
+              <div className="skeleton" style={{ width: '85px', height: '14px', borderRadius: '4px' }} />
+            </div>
+            <div className="events-list-teaser">
+              {[1, 2].map(i => (
+                <div key={i} className="event-teaser-card" style={{ border: '1px solid var(--border-light)', background: '#FFFFFF' }}>
+                  <div className="event-date-badge" style={{ background: 'var(--bg-deep)' }}>
+                    <div className="skeleton" style={{ width: '22px', height: '15px', borderRadius: '3px', margin: '2px auto' }} />
+                    <div className="skeleton" style={{ width: '26px', height: '10px', borderRadius: '2px', margin: '2px auto' }} />
+                  </div>
+                  <div className="event-info-teaser" style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                    <div className="skeleton" style={{ width: '60px', height: '12px', borderRadius: '3px' }} />
+                    <div className="skeleton" style={{ width: '70%', height: '14px', borderRadius: '4px' }} />
+                    <div className="skeleton" style={{ width: '45%', height: '11px', borderRadius: '3px' }} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        </div>
       </div>
-    );
-  }
+    </>
+  );
 
   return (
     <div className="dashboard-wrapper">
       {/* Onboarding Tour Wrapper */}
-      <OnboardingTour />
+      {!dataLoading && user && <OnboardingTour />}
 
       {/* RENDER VIEW: OVERVIEW */}
-      {true && (
+      {!user || dataLoading ? (
+        renderDashboardSkeleton()
+      ) : (
         <>
           <section id="tour-welcome" className="greeting-card glass-panel fade-in">
             <div className="greeting-text">
